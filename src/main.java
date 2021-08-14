@@ -1,5 +1,3 @@
-import GenericArray.GenericArray;
-
 public class main {
 	public static void main(String[] args) {
 		GenericArray liste = new GenericArray<Integer>();
@@ -30,7 +28,11 @@ public class main {
 
 		// Liste veri türünde alt bir liste oluşturdu
 		Object[] altListem = liste.subList(0, 3);
-		System.out.println(altListem.toString());
+		GenericArray test = new GenericArray();
+		for (Object o : altListem){
+			test.add(o);
+		}
+		System.out.println(test.toString());
 
 		// Değerim listedeki olup olmadığını sorguladı
 		System.out.println("Listemde 20 değeri : " + liste.contains(20));
