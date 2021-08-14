@@ -97,13 +97,12 @@ public class GenericArray<T>{
         array = new Object[10];
     }
 
-    public Object[] subList(int start, int finish){
-        Object[] array = new Object[finish - start + 1];
-        int arrayIndex = 0;
+    public GenericArray subList(int start, int finish){
+        GenericArray subList = new GenericArray();
         for(int i = start; i <= finish; i++){
-            array[arrayIndex++] = this.array[i];
+            subList.add(this.array[i]);
         }
-        return array;
+        return subList;
     }
 
     public Boolean contains(T value){
