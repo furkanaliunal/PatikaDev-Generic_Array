@@ -27,12 +27,8 @@ public class main {
 		System.out.println("Object dizisinin ilk elemanı :" + dizi[0]);
 
 		// Liste veri türünde alt bir liste oluşturdu
-		Object[] altListem = liste.subList(0, 3);
-		GenericArray test = new GenericArray();
-		for (Object o : altListem){
-			test.add(o);
-		}
-		System.out.println(test.toString());
+		GenericArray<Integer> altListem = liste.subList(0, 3);
+		System.out.println(altListem.toString());
 
 		// Değerim listedeki olup olmadığını sorguladı
 		System.out.println("Listemde 20 değeri : " + liste.contains(20));
